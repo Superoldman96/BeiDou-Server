@@ -7956,7 +7956,7 @@ public class Character extends AbstractCharacterObject {
                             rs.next();
                             for (int mob : qs.getProgress().keySet()) {
                                 psProgress.setInt(1, id);
-                                psProgress.setInt(2, rs.getInt(1));
+                                psProgress.setLong(2, rs.getLong(1));
                                 psProgress.setInt(3, mob);
                                 psProgress.setString(4, qs.getProgress(mob));
                                 psProgress.addBatch();
@@ -7965,7 +7965,7 @@ public class Character extends AbstractCharacterObject {
 
                             for (int i = 0; i < qs.getMedalMaps().size(); i++) {
                                 psMedal.setInt(1, id);
-                                psMedal.setInt(2, rs.getInt(1));
+                                psMedal.setLong(2, rs.getLong(1));
                                 psMedal.setInt(3, qs.getMedalMaps().get(i));
                                 psMedal.addBatch();
                             }
